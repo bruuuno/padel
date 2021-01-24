@@ -6,7 +6,7 @@ var router = express.Router();
 
 const DAYS_AHEAD = 15;
 
-router.get('/', async function(req, res, next) {
+router.get('/padel', async function(req, res, next) {
 	
 	let response = await padelNextDays(DAYS_AHEAD);
 
@@ -14,10 +14,9 @@ router.get('/', async function(req, res, next) {
 		return a.date > b.date;
 	});
 
-	res.render('index', {
-		title: 'Padel',
-		response: response
-	});
+	console.log(response);
+
+	res.send(response);
 });
 
 async function padelNextDays(numberOfDaysAhead) {
