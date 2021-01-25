@@ -7,7 +7,7 @@ export default class ListPadel extends Component {
 
     return (
       <div>
-        <h1 class="mb-4"><strong>Padel</strong> <span class="text-muted small">next 15 days</span></h1>
+        <h1 class="mt-2 mb-4"><strong>Padel</strong> <span class="text-muted small">next 15 days</span></h1>
         <Fetch url={url} >
           {({ loading, data, error }) => (
             <div>
