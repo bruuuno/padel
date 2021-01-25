@@ -4,7 +4,8 @@ import Fetch from 'react-fetch-component';
 export default class ListPadel extends Component {
   render() {
 
-    const url = `http://localhost:3000/api/padel`;
+    const url = `/api/padel`;
+    console.log('url', url);
 
     return (
       <div>
