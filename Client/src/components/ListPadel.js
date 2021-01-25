@@ -7,11 +7,11 @@ export default class ListPadel extends Component {
 
     return (
       <div>
-        <h1><strong>Padel</strong> <span class="text-muted small">next 15 days</span></h1>
+        <h1 class="mb-4"><strong>Padel</strong> <span class="text-muted small">next 15 days</span></h1>
         <Fetch url={url} >
           {({ loading, data, error }) => (
             <div>
-              {loading && <div class="spinner-border mt-4" role="status">
+              {loading && <div class="spinner-border" role="status">
                 <span class="visually-hidden"></span>
               </div>}
               {data && data.map((val, i) => {
