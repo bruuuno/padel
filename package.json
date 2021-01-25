@@ -5,8 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "start:watch": "nodemon index.js",
-    "client-build": "cd Client && yarn build && copy -r build ../ -force",
-    "client-copy": "cd Client && ncp build ../build"
+    "client-build": "cd Client && yarn build && ncp build ../build"
   },
   "dependencies": {
     "bootstrap-material-design": "^4.1.1",
@@ -19,6 +18,7 @@
     "morgan": "~1.9.1",
     "ncp": "^2.0.0",
     "node-fetch": "^2.6.1",
+    "node-sass": "^5.0.0",
     "pug": "2.0.0-beta11"
   }
 }
