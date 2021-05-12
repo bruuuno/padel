@@ -34,7 +34,7 @@ async function padelNextDays(numberOfDaysAhead) {
 			
 			let url = `https://www.prenotauncampo.it/default/search/getresults/?location=Modena, MO, Italia&lat=44.647128&lon=10.9252269&city=Modena&sport=17&form-date=${day.format("YYYY-MM-DD")}&date=${day.format("YYYY-MM-DD")} ${time}&sort=popularity&radius=10&fuzzy=on`;
 				
-			let fetchResponse = JSON.stringify(await (await fetch(url)).json());
+			let fetchResponse = JSON.stringify(await (await fetch(url, { timeout = 120000 })).json());
 
 			fetchResponse = handleResponse(day, time, day.format("dddd"), fetchResponse);
 			
